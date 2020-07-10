@@ -56,16 +56,18 @@ print("0 |0 |x")
 print("------------------------------------")
 
 while True:
-
-    #End=GameOver()
-    if totalMoves == 9 or End==1:
-        print("Game over")
-        break
     print(Board[1] + " |" + Board[2] + " | " + Board[3])
     print("--+--+--")
     print(Board[4] + " |" + Board[5] + " |" + Board[6])
     print("--+--+--")
     print(Board[7] + " |" + Board[8] + " |" + Board[9])
+       #End=GameOver()
+    if totalMoves == 9:
+        print("Match draw")
+        break
+    elif End==1:
+        GameOver()
+        break
     while True:
         if player==1:
             inputOne=int(input("First player "))
